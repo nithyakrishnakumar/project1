@@ -96,23 +96,13 @@ header h5
      <li><a href="product">Product</a></li>
       <li><a href="wedding">Wedding</a></li>
        <li><a href="find">Find Us</a></li>
-       <li><a href="viewproduct">Admin</a></li>
+          <li><a href="viewproduct">viewproductlist</a></li>
       
           </ul>
-    <div class="col-sm-3">
-        <form class="navbar-form" role="search">
-        <div class="input-group">
-            <input type="text" class="form-control" placeholder="Search" name="q">
-            <div class="input-group-btn">
-                <button class="btn btn btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
-            </div>
-        </div>
-        </form>
-    </div>
+    
     <ul class="nav navbar-nav navbar-right">
-      <li><a href="login">login</a></li>
-      <li><a href="reg">sign up</a></li>
-     
+      <li><a href="main">logout</a></li>
+      
     </ul>
   </div><!-- /.navbar-collapse --></div>
 </nav>

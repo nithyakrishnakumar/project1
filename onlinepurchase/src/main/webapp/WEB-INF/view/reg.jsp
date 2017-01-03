@@ -1,5 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="forms"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+
+<%@page isELIgnored="false"%>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -13,56 +18,67 @@
   <script src="Resources/bootstrap/js/bootstrap.min.js"></script>
            <style type="text/javascript">>
       
-    body { padding-top:10px; }
-    .form-control { margin-bottom: 10px; }
+   <style>
+		.divRegForm{
+			position: relative;
+			top:22px;
+		}
+		#regForm{
+			text-align: center;
+		}
+		input{
+			border: 1px solid Darkred;
+    		border-radius: 0px;
+		}
+		#regPanel{
+			width: 50px;			
+			position: fixed;
+			background: Lightblue;
+		}
+.button
+{
+font color="red";
+}
 
-  </style>
-  
-  
-</head>
+	</style>
+
+  </head>
 <body>
 <jsp:include page="header.jsp"></jsp:include>
-  <div class="container">
-  <div class="row" style="margin-top:70px;">
-		<div class="col-md-4 col-md-offset-4">
-  
-  <h3 style="color:blue; text-align: center">New Users Register Here!</h3>
-   	
- <form method="POST" action=" " accept-charset="UTF-8" role="form" class="form-signin"><input name="_token" type="hidden" value="">
-		<fieldset>
-		  <div class="row">
-            <div class="col-xs-6 col-md-6">
-               <input class="form-control" name="firstname" placeholder="First Name" type="text"required autofocus />
-            </div>
-            <div class="col-xs-6 col-md-6">
-               <input class="form-control" name="lastname" placeholder="Last Name" type="text" required />
-            </div>
-          </div>
-          <br>
-			<input class="form-control middle" placeholder="E-mail Id" name="email" type="text">
-			<br>
-			<input class="form-control middle" placeholder="Password" name="password" type="password" value="">
-			<br>
-			<input class="form-control bottom" placeholder="Confirm Password" name="password_confirmation" type="password" value="">
-	      <br>
-	    <label class="radio-inline">
-            <input type="radio" name="sex" id="inlineCheckbox1" value="male" />
-               Male
-        </label>
-        <label class="radio-inline">
-            <input type="radio" name="sex" id="inlineCheckbox2" value="female" />
-               Female
-        </label>
-            <br />
-            <br />
-            <button class="btn btn-lg btn-primary btn-block" type="submit">
-                Sign up</button>
-	
-	</fieldset>
-	</form>
+<div class = "container">
+	<center><div style="height: 400PX;width: 500PX" class = "panel panel-danger" id = "regPanel">
+		<div class = "panel-heading">Signup</div>
+		<div class = "panel-body">
+			<br/>
+			<table>
+			<tr>
+			<td>
+			<div class = divRegForm>
+			<forms:form id = "regForm" method = "POST" commandName = "regCommand" action = "">
+				<forms:input type = "text" path = "name" placeholder = "Name" size = "50"/>
+				<br/><br/>
+				<forms:input type = "text" path = "email" placeholder = "E-mail" size = "50"/>				
+				<br/><br/>
+				<forms:input type = "password" path = "password" placeholder = "Password"  size = "50"/>				
+				<br/><br/>
+				<forms:input type = "password" path = "confirmpassword" placeholder = "confirmPassword" size = "50"/>	
+				<br/><br/>
+				<forms:input type = "text" path = "sex" placeholder = "sex" size = "50"/>				
+				<br/><br/>
+				<center><input class = "btn btn-danger active" type = "submit" value = "Sign up" size = "50"/></center>
+				</center>
+				<br/>
+				<br/>
+			</forms:form>
+			</div>
+			</td>
+			</tr>
+			</table>
+		</div>
 	</div>
-	</div>
-	</div>	   
+</div>
+
+ 
 	<script type="text/javascript">
 	
 	</script>

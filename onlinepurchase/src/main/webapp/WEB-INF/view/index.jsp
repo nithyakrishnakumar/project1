@@ -1,3 +1,6 @@
+ .jumbotron {
+      margin-bottom: 0;
+      <div class="jumbotron">
 <!DOCTYPE html>
 <html>
 <head>

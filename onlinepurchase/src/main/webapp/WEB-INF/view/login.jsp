@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%@ taglib uri="http://www.springframework.org/tags/form" prefix="forms"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -43,8 +46,8 @@ font-size:50px;
         </div>
           </div>
     <div style="padding-left: 30px; padding-bottom: 10px;"></div>
-    <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
-    </fieldset>
+        <button class="btn btn-lg btn-primary btn-block" type="submit"><a href="login">main</a>Login</button>
+        </fieldset>
   </form>
 </div>
 </div>
